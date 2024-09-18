@@ -12,5 +12,9 @@ class Article(models.Model):
     thumbnails = models.ImageField(blank=True, null=True, upload_to="media")
 
 
+    def __str__(self):
+        return f"{self.name} ({self.stock})"
+
+
 class Cart(models.Model):
     pass
